@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Coarse Correspondences Elicit 3D Spacetime Understanding in Multimodal Language Model">
+
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Vision Language Model, Multimodal Benchmark, Multimodal Learning, LLM, VLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Coarse Correspondences</title>
+  <link rel="icon" type="image/x-icon" href="static/images/blink-removebg-preview.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yushi-hu.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://finegrainedrlhf.github.io/">
+            Fine-Grained RLHF (NeurIPS 2023)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Coarse Correspondences Elicit 3D Spacetime Understanding in Multimodal Language Model</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://liubl1217.github.io/" target="_blank"><font color="#B082C9"><b>Benlin Liu</b></font></a><sup>1*</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=kMui170AAAAJ" target="_blank"><font color="#B082C9"><b>Yuhao Dong</b></font></a><sup>2,3*</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://github.com/InvincibleWyq" target="_blank"><font color="#B082C9"><b>Yiqin Wang</b></font></a><sup>2*</sup>&emsp;
+                </span>
+                <br>
+                <span class="author-block">
+                  <a href="https://raoyongming.github.io/" target="_blank"><font color="#B082C9"><b>Yongming Rao</b></font></a><sup>3</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://andytang15.github.io/" target="_blank"><font color="#B082C9"><b>Yansong Tang</b></font></a><sup>2</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://people.csail.mit.edu/weichium/" target="_blank"><font color="#B082C9"><b>Wei-Chiu Ma</b></font></a><sup>4,5</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="http://www.ranjaykrishna.com/" target="_blank"><font color="#B082C9"><b>Ranjay Krishna</b></font></a><sup>1,4</sup>&emsp;
+                </span>
+                </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>University of Washington&emsp;
+                      <sup>2</sup>Tsinghua University&emsp;
+                      <sup>3</sup>Tencent&emsp; <br>
+                      <sup>4</sup>Allen Institute for AI&emsp;
+                      <sup>5</sup>Cornell University&emsp;
+                      <!-- <sup>6</sup>Cornell University&emsp; -->
+                      <sup>*</sup>Equal Contribution&emsp;
+                    </span>
+                    <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="content has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2404.12390.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- <span class="link-block">
+                      <a href="https://huggingface.co/datasets/BLINK-Benchmark/BLINK" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa fa-database"></i>
+                      </span>
+                      <span>HF Dataset</span>
+                    </a>
+                  </span>
+                  </span> -->
+
+                  <span class="link-block">
+                    <a href="https://github.com/zeyofu/BLINK_Benchmark" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                  </span>
+
+                <!-- <span class="link-block">
+                  <a href="https://eval.ai/web/challenges/challenge-page/2287/overview" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-link"></i>
+                  </span>
+                  <span>EvalAI</span>
+                  </a>
+                </span> -->
+
+                <span class="link-block">
+                  <a href="https://twitter.com/XingyuFu2/status/1781368539213082683" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Twitter</span>
+                  </a>
+                </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce <b>Coarse Correspondences</b>, a simple, training-free, effective, and general-purpose visual prompting method to elicit 3D and temporal understanding in multimodal LLMs. Our method uses a lightweight tracking model to find object correspondences between frames in a video or between sets of image viewpoints. It selects the most frequent object instances and visualizes them with markers with unique IDs in the image. With this simple approach, we achieve state- of-the-art results on 3D understanding benchmarks including ScanQA (+20.5%) and a subset of OpenEQA (+9.7%), and on long-form video benchmarks such as EgoSchema (+6.0%). We also curate a small diagnostic dataset to evaluate whether MLLMs can reason about space from a described viewpoint other than the camera viewpoint. Again, Coarse Correspondences improves spatial perspective-taking abilities but we highlight that MLLMs struggle with this task. Together, we demonstrate that our simple prompting method can significantly aid downstream tasks that require 3D or temporal reasoning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Coarse Correspondences</h2>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        <span style="font-weight:bold;">Coarse Correspondences  </span>
+        is a simple, training-free, effective, and general-purpose visual prompting method to elicit 3D and temporal understanding in multimodal LLMs. Our method uses a lightweight tracking model to find object correspondences between frames in a video or between sets of image viewpoints.</h2>
+      <img src="static/images/teaser.png" height="100%"/>
+      <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
+      <h2 class="hero-body">
+        <br>
+        <b>Fig 1: Overall pipeline of  <span style="font-weight:bold;">Coarse Correspondences</span>.</b> We combined light-weight video tracking models and multimodal LLMs to achieve a better understanding of 3D spacetime. (a) We use a tracking model at a high frame rate to obtain instance segmentation masks for each frame. (b) Then, we sequentially sparsify input frames, select prominent coarse correspondences, and visualize the constructed coarse correspondences on the images. (c) Finally, we enable MLLMs to better understand 3D spacetime from the prompted images.
+      </h2>
+      
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Brief video introduction about <span style="font-weight:bold;">BLINK Benchmark.</span>. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- BLINK Comparison -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Space Understanding with Coarse Correspondences</h2>
+        <!-- <h2 class="title is-3">BLINK Benchmark -- Unique Features of BLINK?</h2> -->
+        <h2 class="content has-text-justified">
+          We evaluate the spatial understanding ability of Coarse Correspondences across ScanQA and OpenEQA which require understanding 3D space. We augment GPT-4V and GPT-4O with Coarse Correspondences and evaluate its zero-shot performance. We show that Coarse Correspondences not only significantly improves the base GPT models but that the improvements establish new state-of-the-art results across all our evaluations.  
+        </h2>
+        <img src="static/images/scanqa.png" height="100%"/>
+        <h2 class="content has-text-justified">
+          <b>Tab 1: Comparison on ScanQA validation set.</b> Following 3D-LLM, we conduct experiments on ScanQA validation set to demonstrate the effectiveness of Coarse Correspondences with different MLLMs. GPT-4V and GPT-4O surpass all finetuned models with our method in a zero-shot manner.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Paper Qualitative -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Temporal Understanding with Coarse Correspondences</h2>
+        <h2 class="content has-text-justified">
+          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+        </h2>
+        <div class="myrow">
+          <div class="mycolumn">
+            <img src="static/images/openeqa.png" style="width:90%">
+            <h2 class="content has-text-centered">
+              <b>Tab 2: Comparisons on EM-EQA setting of OpenEQA.</b>
+            </h2>
+          </div>
+          <div class="mycolumn">
+            <img src="static/images/egoschema.png" style="width:87%">
+            <h2 class="content has-text-centered">
+              <b>Tab 3: Comparisons on EgoSchema validation set.</b>
+            </h2>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper Quantitative -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">SOT Benchmark</h2>
+        <h2 class="content has-text-justified">
+          In cognitive science, the spatial orientation test (SOT) is a widely adopted examination for spatial intelligence in children. The SOT assesses <b>spatial perspective-taking</b>, the ability to imagine how an object or scene would appear from a perspective different from the current camera viewpoint.
+        </h2>
+        <img src="static/images/sot.png" height="100%"/>
+        <h2 class="content has-text-justified">
+          <b>Fig 2: Illustration of our SOT dataset.</b> We mention two types of questions: <b>Observer perspective understanding</b> and <b>spatial-perspective taking</b>. Coarse Correspondences demonstrates superior effectiveness on the dataset.
+        </h2>
+        <h2 class="content has-text-justified">
+          We manually curated ten real-world scenes, both indoor and outdoor, using different mobile devices at various viewpoints. We carefully collect ten scenes and for each scene, we designed five carefully crafted questions, each asking the model to determine if one object is to the left or to the right of another from a specific viewpoint. In total, across the 10 scenes, SOT has a modest 50 questions.
+        </h2>
+        <div class="myrow">
+          <div class="mycolumn">
+            <img src="static/images/sot_results.png" style="width:100%">
+            <br>
+            <h2 class="content has-text-justified">
+              <b>Tab 4: Comparisons on SOT.</b> Coarse Correspondences shows strong capability of enhancing 3D spatial understanding of MLLMs. It can also ease the striking finding of camera motion bias of current MLLMs.
+            </h2>
+          </div>
+          <div class="mycolumn">
+            <img src="static/images/sot_spt.png" style="width:80%">
+            <h2 class="content has-text-justified">
+              <b>Fig 3: Comparisons on SOT's spatial perspective-taking questions.</b> Coarse Correspondences improves performance but GPT-4O still performs below random chance.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Image carousel examples in BLINK-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Examples of Coarse Correspondences</h2> <br></div>
+      <div class="columns is-centered">
+        <div class="column is-five-sixths">
+      <h2 class="content has-text-justified">
+        We show more qualitative results of Coarse Correspondences on ScanQA and SOT. We visualize the constructed coarse correspondences on the images and show how they can help multimodal LLMs to better understand 3D spacetime. We also provide a case study to compare different prompting methods on ScanQA.
+      </h2>
+    </div></div>
+  </div></section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+           <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/example/mark_vs_raw.jpg" width="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/example/relative_location_modeling.png" width="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/example/relative_location.jpg" width="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/example/case_study.png" width="100%"/>
+          </div>
+    
+          </div>
+        </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{fu2024blink,
+          title={BLINK: Multimodal Large Language Models Can See but Not Perceive},
+          author={Fu, Xingyu and Hu, Yushi and Li, Bangzheng and Feng, Yu and Wang, Haoyu and Lin, Xudong and Roth, Dan and Smith, Noah A and Ma, Wei-Chiu and Krishna, Ranjay},
+          journal={arXiv preprint arXiv:2404.12390},
+          year={2024}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
