@@ -177,7 +177,7 @@
         <span style="font-weight:bold;">Coarse Correspondences  </span>
         is a simple, training-free, effective, and general-purpose visual prompting method to elicit 3D and temporal understanding in multimodal LLMs. Our method uses a lightweight tracking model to find object correspondences between frames in a video or between sets of image viewpoints.</h2>
       <img src="static/images/teaser.png" height="100%"/>
-      <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
+
       <h2 class="hero-body">
         <br>
         <b>Fig 1: Overall pipeline of  <span style="font-weight:bold;">Coarse Correspondences</span>.</b> We combined light-weight video tracking models and multimodal LLMs to achieve a better understanding of 3D spacetime. (a) We use a tracking model at a high frame rate to obtain instance segmentation masks for each frame. (b) Then, we sequentially sparsify input frames, select prominent coarse correspondences, and visualize the constructed coarse correspondences on the images. (c) Finally, we enable MLLMs to better understand 3D spacetime from the prompted images.
@@ -205,13 +205,12 @@
 </section> -->
 <!-- End teaser video -->
 
-<!-- BLINK Comparison -->
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-sixths">
         <h2 class="title is-3">Space Understanding with Coarse Correspondences</h2>
-        <!-- <h2 class="title is-3">BLINK Benchmark -- Unique Features of BLINK?</h2> -->
+        
         <h2 class="content has-text-justified">
           We evaluate the spatial understanding ability of Coarse Correspondences across ScanQA and OpenEQA which require understanding 3D space. We augment GPT-4V and GPT-4O with Coarse Correspondences and evaluate its zero-shot performance. We show that Coarse Correspondences not only significantly improves the base GPT models but that the improvements establish new state-of-the-art results across all our evaluations.  
         </h2>
@@ -293,7 +292,6 @@
 </section>
 
 
-<!-- Image carousel examples in BLINK-->
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -314,24 +312,20 @@
             <!-- Your image here -->
             <img src="static/images/example/mark_vs_raw.jpg" width="100%"/>
                         <!-- <h2 class="subtitle has-text-centered">
-              Example case from <b>BLINK</b> and GPT-4V prediction.
+              
             </h2> -->
           </div>
     
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/example/relative_location_modeling.png" width="100%"/>
-                        <!-- <h2 class="subtitle has-text-centered">
-              Example case from <b>BLINK</b> and GPT-4V prediction.
-            </h2> -->
+                        
           </div>
     
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/example/relative_location.jpg" width="100%"/>
-                        <!-- <h2 class="subtitle has-text-centered">
-              Example case from <b>BLINK</b> and GPT-4V prediction.
-            </h2> -->
+                        
           </div>
     
           <div class="item">
@@ -351,10 +345,10 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @article{fu2024blink,
-          title={BLINK: Multimodal Large Language Models Can See but Not Perceive},
-          author={Fu, Xingyu and Hu, Yushi and Li, Bangzheng and Feng, Yu and Wang, Haoyu and Lin, Xudong and Roth, Dan and Smith, Noah A and Ma, Wei-Chiu and Krishna, Ranjay},
-          journal={arXiv preprint arXiv:2404.12390},
+        @article{liu2024coarse,
+          title={Coarse Correspondences Elicit 3D Spacetime Understanding in Multimodal Language Model},
+          author={Liu, Benlin and Dong, Yuhao and Wang, Yiqin and Rao, Yongming and Tang, Yansong and Ma, Wei-Chiu and Krishna, Ranjay},
+          journal={arXiv preprint arXiv:2408.00754},
           year={2024}
         }
       </code></pre>
